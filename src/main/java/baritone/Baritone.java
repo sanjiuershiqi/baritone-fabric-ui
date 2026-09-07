@@ -33,6 +33,7 @@ import baritone.process.*;
 import baritone.selection.SelectionManager;
 import baritone.utils.BlockStateInterface;
 import baritone.utils.GuiClick;
+import baritone.utils.BaritoneControlScreen;
 import baritone.utils.InputOverrideHandler;
 import baritone.utils.PathingControlManager;
 import baritone.utils.player.BaritonePlayerContext;
@@ -249,6 +250,8 @@ public class Baritone implements IBaritone {
             } catch (Exception ignored) {}
         }).start();
     }
+
+    @Override public void openControl() { mc.execute(() -> mc.setScreen(new BaritoneControlScreen())); }
 
     public Path getDirectory() {
         return this.directory;

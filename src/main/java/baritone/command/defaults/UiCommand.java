@@ -1,0 +1,3 @@
+package baritone.command.defaults;
+import baritone.api.IBaritone; import baritone.api.command.Command; import baritone.api.command.argument.IArgConsumer; import baritone.api.command.exception.CommandException; import java.util.Collections; import java.util.List; import java.util.stream.Stream;
+public final class UiCommand extends Command { public UiCommand(IBaritone b){super(b,"ui","control");} public void execute(String l,IArgConsumer a)throws CommandException{a.requireMax(0); baritone.openControl();} public Stream<String> tabComplete(String l,IArgConsumer a){return Stream.empty();} public String getShortDesc(){return "Open Baritone control panel";} public List<String> getLongDesc(){return Collections.singletonList("> ui");} }

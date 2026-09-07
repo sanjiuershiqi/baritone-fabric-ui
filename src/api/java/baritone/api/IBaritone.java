@@ -143,4 +143,5 @@ public interface IBaritone {
      * Open click
      */
     void openClick();
+    void openControl();
 }
