@@ -251,7 +251,7 @@ public class Baritone implements IBaritone {
         }).start();
     }
 
-    @Override public void openControl() { mc.execute(() -> mc.setScreen(new BaritoneControlScreen())); }
+    @Override public void openControl() { mc.execute(() -> mc.gui.setScreen(new BaritoneControlScreen())); }
 
     public Path getDirectory() {
         return this.directory;
